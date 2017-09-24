@@ -226,7 +226,7 @@ private:
 	FN_DECIMAL m_lacunarity = FN_DECIMAL(2);
 	FN_DECIMAL m_gain = FN_DECIMAL(0.5);
 	FractalType m_fractalType = FBM;
-	FN_DECIMAL m_fractalBounding;
+	FN_DECIMAL m_fractalBounding = FN_DECIMAL(0);
 
 	CellularDistanceFunction m_cellularDistanceFunction = Euclidean;
 	CellularReturnType m_cellularReturnType = CellValue;
