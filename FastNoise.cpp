@@ -34,6 +34,8 @@
 #include <algorithm>
 #include <random>
 
+#include <boost/random.hpp>
+
 const FN_DECIMAL GRAD_X[] =
 {
 	1, -1, 1, -1,
@@ -205,7 +207,7 @@ void FastNoise::SetSeed(int seed)
 
 	for (int j = 0; j < 256; j++)
 	{
-		std::uniform_int_distribution<> dis(0, 256 - j);
+		boost::random::uniform_int_distribution<> dis(0, 256 - j);
 		int k = dis(gen) + j;
 		int l = m_perm[j];
 		m_perm[j] = m_perm[j + 256] = m_perm[k];
